@@ -557,6 +557,8 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <part name="R48" library="lightsuits" deviceset="R0402" device="" value=""/>
 <part name="U2" library="lightsuits" deviceset="PCA9635" device=""/>
 <part name="U3" library="lightsuits" deviceset="PCA9635" device=""/>
+<part name="R49" library="lightsuits" deviceset="R0402" device="" value=""/>
+<part name="R50" library="lightsuits" deviceset="R0402" device="" value=""/>
 </parts>
 <sheets>
 <sheet>
@@ -633,6 +635,8 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <instance part="R48" gate="G$1" x="261.62" y="33.02" rot="R90"/>
 <instance part="U2" gate="G$1" x="139.7" y="144.78"/>
 <instance part="U3" gate="G$1" x="238.76" y="144.78"/>
+<instance part="R49" gate="G$1" x="-73.66" y="172.72" rot="R180"/>
+<instance part="R50" gate="G$1" x="-55.88" y="170.18" rot="R180"/>
 </instances>
 <busses>
 <bus name="B[0..15]">
@@ -1523,11 +1527,8 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <pinref part="U1" gate="G$1" pin="SDA"/>
 <wire x1="58.42" y1="157.48" x2="66.04" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="157.48" x2="66.04" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="SDA"/>
-<wire x1="66.04" y1="172.72" x2="-81.28" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="172.72" x2="165.1" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="172.72" x2="165.1" y2="157.48" width="0.1524" layer="91"/>
-<junction x="66.04" y="172.72"/>
 <pinref part="U2" gate="G$1" pin="SDA"/>
 <wire x1="165.1" y1="157.48" x2="154.94" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="172.72" x2="271.78" y2="172.72" width="0.1524" layer="91"/>
@@ -1535,18 +1536,18 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <junction x="165.1" y="172.72"/>
 <pinref part="U3" gate="G$1" pin="SDA"/>
 <wire x1="271.78" y1="157.48" x2="254" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="R49" gate="G$1" pin="1"/>
+<wire x1="-68.58" y1="172.72" x2="66.04" y2="172.72" width="0.1524" layer="91"/>
+<junction x="66.04" y="172.72"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="SCL"/>
-<wire x1="-81.28" y1="170.18" x2="63.5" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="170.18" x2="63.5" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="SCL"/>
 <wire x1="63.5" y1="154.94" x2="58.42" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="170.18" x2="162.56" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="170.18" x2="162.56" y2="154.94" width="0.1524" layer="91"/>
-<junction x="63.5" y="170.18"/>
 <pinref part="U2" gate="G$1" pin="SCL"/>
 <wire x1="162.56" y1="154.94" x2="154.94" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="170.18" x2="269.24" y2="170.18" width="0.1524" layer="91"/>
@@ -1554,6 +1555,9 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <junction x="162.56" y="170.18"/>
 <pinref part="U3" gate="G$1" pin="SCL"/>
 <wire x1="269.24" y1="154.94" x2="254" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="R50" gate="G$1" pin="1"/>
+<wire x1="-50.8" y1="170.18" x2="63.5" y2="170.18" width="0.1524" layer="91"/>
+<junction x="63.5" y="170.18"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -1954,6 +1958,20 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <pinref part="LED7" gate="G$1" pin="3"/>
 <wire x1="139.7" y1="58.42" x2="139.7" y2="66.04" width="0.1524" layer="91"/>
 <junction x="139.7" y="58.42"/>
+</segment>
+</net>
+<net name="N$51" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="SDA"/>
+<pinref part="R49" gate="G$1" pin="2"/>
+<wire x1="-81.28" y1="172.72" x2="-78.74" y2="172.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$52" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="SCL"/>
+<pinref part="R50" gate="G$1" pin="2"/>
+<wire x1="-81.28" y1="170.18" x2="-60.96" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

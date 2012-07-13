@@ -557,8 +557,8 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <part name="R48" library="lightsuits" deviceset="R0402" device="" value=""/>
 <part name="U2" library="lightsuits" deviceset="PCA9635" device=""/>
 <part name="U3" library="lightsuits" deviceset="PCA9635" device=""/>
-<part name="R49" library="lightsuits" deviceset="R0402" device="" value=""/>
-<part name="R50" library="lightsuits" deviceset="R0402" device="" value=""/>
+<part name="R49" library="lightsuits" deviceset="R0402" device="" value="5k"/>
+<part name="R50" library="lightsuits" deviceset="R0402" device="" value="5k"/>
 </parts>
 <sheets>
 <sheet>

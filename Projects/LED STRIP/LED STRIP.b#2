@@ -440,8 +440,8 @@ design rules under a new name.</description>
 <element name="R48" library="lightsuits" package="0402" value="" x="-31.75" y="55.88"/>
 <element name="U2" library="lightsuits" package="TSSOP28" value="PCA9635" x="46.99" y="5.08"/>
 <element name="U3" library="lightsuits" package="TSSOP28" value="PCA9635" x="48.26" y="29.21"/>
-<element name="R49" library="lightsuits" package="0402" value="5k" x="-59.69" y="-1.27"/>
-<element name="R50" library="lightsuits" package="0402" value="5k" x="-59.69" y="-5.08"/>
+<element name="R49" library="lightsuits" package="0402" value="" x="-59.69" y="-1.27"/>
+<element name="R50" library="lightsuits" package="0402" value="" x="-59.69" y="-5.08"/>
 </elements>
 <signals>
 <signal name="GND">
