@@ -1,4 +1,4 @@
 Eagle-Libraries
 ===============
 
-holds all eagle libraries
+holds all eagle files - projects and libraries
