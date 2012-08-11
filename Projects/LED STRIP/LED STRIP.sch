@@ -9,6 +9,20 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
@@ -105,37 +119,69 @@
 <library name="lightsuits">
 <packages>
 <package name="TSSOP28">
-<smd name="1" x="0" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="2" x="0.65" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="3" x="1.3" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="4" x="1.95" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="5" x="2.6" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="6" x="3.25" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="7" x="3.9" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="22" x="3.9" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="23" x="3.25" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="25" x="1.95" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="24" x="2.6" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="26" x="1.3" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="27" x="0.65" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="28" x="0" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="21" x="4.55" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="20" x="5.2" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="19" x="5.85" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="18" x="6.5" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="17" x="7.15" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="16" x="7.8" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="15" x="8.45" y="5.55" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="8" x="4.55" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="9" x="5.2" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="10" x="5.85" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="11" x="6.5" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="12" x="7.15" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="13" x="7.8" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="14" x="8.45" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
-<smd name="GND" x="4.325" y="2.775" dx="2.74" dy="4.75" layer="1" rot="R90"/>
-<rectangle x1="-1" y1="-0.57" x2="-0.5" y2="-0.07" layer="21" rot="R90"/>
-<text x="10.2" y="-0.35" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<wire x1="-4.75" y1="-2.1" x2="4.75" y2="-2.1" width="0.254" layer="21"/>
+<wire x1="4.75" y1="-2.1" x2="4.75" y2="2.1" width="0.254" layer="21"/>
+<wire x1="4.75" y1="2.1" x2="-4.75" y2="2.1" width="0.254" layer="21"/>
+<wire x1="-4.75" y1="2.1" x2="-4.75" y2="-2.1" width="0.254" layer="21"/>
+<circle x="-4.1" y="-1.4" radius="0.1118" width="0.254" layer="21"/>
+<smd name="1" x="-4.225" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="2" x="-3.575" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="3" x="-2.925" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="4" x="-2.275" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="5" x="-1.625" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="6" x="-0.975" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="7" x="-0.325" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="8" x="0.325" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="9" x="0.975" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="10" x="1.625" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="11" x="2.275" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="12" x="2.925" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="13" x="3.575" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="14" x="4.225" y="-2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="15" x="4.225" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="16" x="3.575" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="17" x="2.925" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="18" x="2.275" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="19" x="1.625" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="20" x="0.975" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="21" x="0.325" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="22" x="-0.325" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="23" x="-0.975" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="24" x="-1.625" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="25" x="-2.275" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="26" x="-2.925" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="27" x="-3.575" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<smd name="28" x="-4.225" y="2.9" dx="0.35" dy="1.2" layer="1"/>
+<text x="-3.556" y="0.254" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.556" y="-1.524" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-4.375" y1="-3.25" x2="-4.075" y2="-2.2" layer="51"/>
+<rectangle x1="-3.725" y1="-3.25" x2="-3.425" y2="-2.2" layer="51"/>
+<rectangle x1="-3.075" y1="-3.25" x2="-2.775" y2="-2.2" layer="51"/>
+<rectangle x1="-2.425" y1="-3.25" x2="-2.125" y2="-2.2" layer="51"/>
+<rectangle x1="-1.775" y1="-3.25" x2="-1.475" y2="-2.2" layer="51"/>
+<rectangle x1="-1.125" y1="-3.25" x2="-0.825" y2="-2.2" layer="51"/>
+<rectangle x1="-0.475" y1="-3.25" x2="-0.175" y2="-2.2" layer="51"/>
+<rectangle x1="0.175" y1="-3.25" x2="0.475" y2="-2.2" layer="51"/>
+<rectangle x1="0.825" y1="-3.25" x2="1.125" y2="-2.2" layer="51"/>
+<rectangle x1="1.475" y1="-3.25" x2="1.775" y2="-2.2" layer="51"/>
+<rectangle x1="2.125" y1="-3.25" x2="2.425" y2="-2.2" layer="51"/>
+<rectangle x1="2.775" y1="-3.25" x2="3.075" y2="-2.2" layer="51"/>
+<rectangle x1="3.425" y1="-3.25" x2="3.725" y2="-2.2" layer="51"/>
+<rectangle x1="4.075" y1="-3.25" x2="4.375" y2="-2.2" layer="51"/>
+<rectangle x1="4.075" y1="2.2" x2="4.375" y2="3.25" layer="51"/>
+<rectangle x1="3.425" y1="2.2" x2="3.725" y2="3.25" layer="51"/>
+<rectangle x1="2.775" y1="2.2" x2="3.075" y2="3.25" layer="51"/>
+<rectangle x1="2.125" y1="2.2" x2="2.425" y2="3.25" layer="51"/>
+<rectangle x1="1.475" y1="2.2" x2="1.775" y2="3.25" layer="51"/>
+<rectangle x1="0.825" y1="2.2" x2="1.125" y2="3.25" layer="51"/>
+<rectangle x1="0.175" y1="2.2" x2="0.475" y2="3.25" layer="51"/>
+<rectangle x1="-0.475" y1="2.2" x2="-0.175" y2="3.25" layer="51"/>
+<rectangle x1="-1.125" y1="2.2" x2="-0.825" y2="3.25" layer="51"/>
+<rectangle x1="-1.775" y1="2.2" x2="-1.475" y2="3.25" layer="51"/>
+<rectangle x1="-2.425" y1="2.2" x2="-2.125" y2="3.25" layer="51"/>
+<rectangle x1="-3.075" y1="2.2" x2="-2.775" y2="3.25" layer="51"/>
+<rectangle x1="-3.725" y1="2.2" x2="-3.425" y2="3.25" layer="51"/>
+<rectangle x1="-4.375" y1="2.2" x2="-4.075" y2="3.25" layer="51"/>
 </package>
 <package name="6-PLCC">
 <smd name="1" x="0" y="0" dx="3" dy="1.6" layer="1" rot="R180"/>
@@ -214,7 +260,6 @@
 <pin name="LED9" x="15.24" y="-15.24" length="middle" rot="R180"/>
 <pin name="LED8" x="15.24" y="-17.78" length="middle" rot="R180"/>
 <text x="-15.24" y="-25.4" size="1.778" layer="95">&gt;NAME</text>
-<pin name="GND" x="0" y="-25.4" length="middle" rot="R90"/>
 </symbol>
 <symbol name="RGB_LED">
 <wire x1="0" y1="2.54" x2="0" y2="0" width="0.1524" layer="94"/>
@@ -340,7 +385,6 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <connect gate="G$1" pin="A4" pad="5"/>
 <connect gate="G$1" pin="A5" pad="24"/>
 <connect gate="G$1" pin="A6" pad="25"/>
-<connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="LED0" pad="6"/>
 <connect gate="G$1" pin="LED1" pad="7"/>
 <connect gate="G$1" pin="LED10" pad="17"/>
@@ -672,20 +716,9 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <wire x1="-81.28" y1="167.64" x2="-38.1" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="167.64" x2="-38.1" y2="127" width="0.1524" layer="91"/>
 <junction x="-38.1" y="127"/>
-<pinref part="U1" gate="G$1" pin="GND"/>
-<wire x1="43.18" y1="119.38" x2="43.18" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="114.3" x2="43.18" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="114.3" x2="96.52" y2="114.3" width="0.1524" layer="91"/>
 <junction x="-38.1" y="114.3"/>
-<pinref part="U2" gate="G$1" pin="GND"/>
-<wire x1="43.18" y1="114.3" x2="96.52" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="114.3" x2="139.7" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="114.3" x2="139.7" y2="119.38" width="0.1524" layer="91"/>
-<junction x="43.18" y="114.3"/>
-<pinref part="U3" gate="G$1" pin="GND"/>
-<wire x1="139.7" y1="114.3" x2="198.12" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="114.3" x2="238.76" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="114.3" x2="238.76" y2="119.38" width="0.1524" layer="91"/>
-<junction x="139.7" y="114.3"/>
+<wire x1="96.52" y1="114.3" x2="198.12" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="~OE"/>
 <wire x1="58.42" y1="147.32" x2="96.52" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="147.32" x2="96.52" y2="114.3" width="0.1524" layer="91"/>
@@ -697,8 +730,7 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <pinref part="U3" gate="G$1" pin="~OE"/>
 <wire x1="254" y1="147.32" x2="292.1" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="147.32" x2="292.1" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="292.1" y1="114.3" x2="238.76" y2="114.3" width="0.1524" layer="91"/>
-<junction x="238.76" y="114.3"/>
+<wire x1="292.1" y1="114.3" x2="198.12" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="167.64" x2="15.24" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="167.64" x2="17.78" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="167.64" x2="20.32" y2="167.64" width="0.1524" layer="91"/>
@@ -764,53 +796,6 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <wire x1="223.52" y1="149.86" x2="210.82" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="149.86" x2="210.82" y2="167.64" width="0.1524" layer="91"/>
 <junction x="210.82" y="167.64"/>
-</segment>
-</net>
-<net name="BA0" class="0">
-<segment>
-<wire x1="30.48" y1="147.32" x2="12.7" y2="147.32" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="BA1" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="LED1"/>
-<wire x1="27.94" y1="144.78" x2="12.7" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="BA2" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="LED2"/>
-<wire x1="27.94" y1="142.24" x2="12.7" y2="142.24" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="BA3" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="LED3"/>
-<wire x1="27.94" y1="139.7" x2="12.7" y2="139.7" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="BA4" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="LED4"/>
-<wire x1="27.94" y1="137.16" x2="12.7" y2="137.16" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="BA5" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="LED5"/>
-<wire x1="27.94" y1="134.62" x2="12.7" y2="134.62" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="BA6" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="LED6"/>
-<wire x1="27.94" y1="132.08" x2="12.7" y2="132.08" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="BA7" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="LED7"/>
-<wire x1="27.94" y1="129.54" x2="12.7" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="B8" class="0">
@@ -1069,10 +1054,8 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <wire x1="175.26" y1="142.24" x2="154.94" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="241.3" y1="55.88" x2="241.3" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="LED14" gate="G$1" pin="2"/>
 <wire x1="241.3" y1="58.42" x2="241.3" y2="76.2" width="0.1524" layer="91"/>
-<junction x="241.3" y="58.42"/>
 </segment>
 </net>
 <net name="G15" class="0">
@@ -1083,10 +1066,8 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <wire x1="177.8" y1="144.78" x2="154.94" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="256.54" y1="55.88" x2="256.54" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="LED15" gate="G$1" pin="2"/>
 <wire x1="256.54" y1="58.42" x2="256.54" y2="76.2" width="0.1524" layer="91"/>
-<junction x="256.54" y="58.42"/>
 </segment>
 </net>
 <net name="R0" class="0">
@@ -1868,70 +1849,6 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <wire x1="261.62" y1="45.72" x2="261.62" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="B0" class="0">
-<segment>
-<wire x1="33.02" y1="55.88" x2="33.02" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="LED0" gate="G$1" pin="3"/>
-<wire x1="33.02" y1="58.42" x2="33.02" y2="66.04" width="0.1524" layer="91"/>
-<junction x="33.02" y="58.42"/>
-</segment>
-</net>
-<net name="B1" class="0">
-<segment>
-<wire x1="48.26" y1="55.88" x2="48.26" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="LED1" gate="G$1" pin="3"/>
-<wire x1="48.26" y1="58.42" x2="48.26" y2="66.04" width="0.1524" layer="91"/>
-<junction x="48.26" y="58.42"/>
-</segment>
-</net>
-<net name="B2" class="0">
-<segment>
-<wire x1="63.5" y1="55.88" x2="63.5" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="LED2" gate="G$1" pin="3"/>
-<wire x1="63.5" y1="58.42" x2="63.5" y2="66.04" width="0.1524" layer="91"/>
-<junction x="63.5" y="58.42"/>
-</segment>
-</net>
-<net name="B3" class="0">
-<segment>
-<wire x1="78.74" y1="55.88" x2="78.74" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="LED3" gate="G$1" pin="3"/>
-<wire x1="78.74" y1="58.42" x2="78.74" y2="66.04" width="0.1524" layer="91"/>
-<junction x="78.74" y="58.42"/>
-</segment>
-</net>
-<net name="B4" class="0">
-<segment>
-<wire x1="93.98" y1="55.88" x2="93.98" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="LED4" gate="G$1" pin="3"/>
-<wire x1="93.98" y1="58.42" x2="93.98" y2="66.04" width="0.1524" layer="91"/>
-<junction x="93.98" y="58.42"/>
-</segment>
-</net>
-<net name="B5" class="0">
-<segment>
-<wire x1="109.22" y1="55.88" x2="109.22" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="LED5" gate="G$1" pin="3"/>
-<wire x1="109.22" y1="58.42" x2="109.22" y2="66.04" width="0.1524" layer="91"/>
-<junction x="109.22" y="58.42"/>
-</segment>
-</net>
-<net name="B6" class="0">
-<segment>
-<wire x1="124.46" y1="55.88" x2="124.46" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="LED6" gate="G$1" pin="3"/>
-<wire x1="124.46" y1="58.42" x2="124.46" y2="66.04" width="0.1524" layer="91"/>
-<junction x="124.46" y="58.42"/>
-</segment>
-</net>
-<net name="B7" class="0">
-<segment>
-<wire x1="139.7" y1="55.88" x2="139.7" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="LED7" gate="G$1" pin="3"/>
-<wire x1="139.7" y1="58.42" x2="139.7" y2="66.04" width="0.1524" layer="91"/>
-<junction x="139.7" y="58.42"/>
-</segment>
-</net>
 <net name="N$51" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="SDA"/>
@@ -1976,6 +1893,86 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <wire x1="-22.86" y1="170.18" x2="63.5" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="177.8" x2="-22.86" y2="170.18" width="0.1524" layer="91"/>
 <junction x="-22.86" y="170.18"/>
+</segment>
+</net>
+<net name="B1" class="0">
+<segment>
+<pinref part="LED1" gate="G$1" pin="3"/>
+<wire x1="48.26" y1="58.42" x2="48.26" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="LED1"/>
+<wire x1="27.94" y1="144.78" x2="12.7" y2="144.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="B2" class="0">
+<segment>
+<pinref part="LED2" gate="G$1" pin="3"/>
+<wire x1="63.5" y1="58.42" x2="63.5" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="LED2"/>
+<wire x1="27.94" y1="142.24" x2="12.7" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="B3" class="0">
+<segment>
+<pinref part="LED3" gate="G$1" pin="3"/>
+<wire x1="78.74" y1="58.42" x2="78.74" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="LED3"/>
+<wire x1="27.94" y1="139.7" x2="12.7" y2="139.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="B4" class="0">
+<segment>
+<pinref part="LED4" gate="G$1" pin="3"/>
+<wire x1="93.98" y1="58.42" x2="93.98" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="LED4"/>
+<wire x1="27.94" y1="137.16" x2="12.7" y2="137.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="B5" class="0">
+<segment>
+<pinref part="LED5" gate="G$1" pin="3"/>
+<wire x1="109.22" y1="58.42" x2="109.22" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="LED5"/>
+<wire x1="27.94" y1="134.62" x2="12.7" y2="134.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="B6" class="0">
+<segment>
+<pinref part="LED6" gate="G$1" pin="3"/>
+<wire x1="124.46" y1="58.42" x2="124.46" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="LED6"/>
+<wire x1="27.94" y1="132.08" x2="12.7" y2="132.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="B7" class="0">
+<segment>
+<pinref part="LED7" gate="G$1" pin="3"/>
+<wire x1="139.7" y1="58.42" x2="139.7" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="LED7"/>
+<wire x1="27.94" y1="129.54" x2="12.7" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="B0" class="0">
+<segment>
+<pinref part="LED0" gate="G$1" pin="3"/>
+<wire x1="33.02" y1="58.42" x2="33.02" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="LED0"/>
+<wire x1="27.94" y1="147.32" x2="12.7" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

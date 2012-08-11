@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -486,6 +486,16 @@
 <rectangle x1="-1" y1="-0.57" x2="-0.5" y2="-0.07" layer="21" rot="R90"/>
 <text x="10.2" y="-0.35" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 </package>
+<package name="6-PLCC">
+<smd name="1" x="0" y="0" dx="3" dy="1.6" layer="1" rot="R180"/>
+<smd name="2" x="0" y="-2" dx="3" dy="1.6" layer="1" rot="R180"/>
+<smd name="3" x="0" y="-4" dx="3" dy="1.6" layer="1" rot="R180"/>
+<smd name="4" x="5.4" y="-4" dx="3" dy="1.6" layer="1" rot="R180"/>
+<smd name="5" x="5.4" y="-2" dx="3" dy="1.6" layer="1" rot="R180"/>
+<smd name="6" x="5.4" y="0" dx="3" dy="1.6" layer="1" rot="R180"/>
+<text x="-1.35" y="-6.35" size="1.27" layer="25">&gt;NAME</text>
+<rectangle x1="-1.45" y1="1.05" x2="-0.55" y2="1.95" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="RESETBUTTON">
@@ -811,7 +821,82 @@
 <pin name="LED10" x="15.24" y="-12.7" length="middle" rot="R180"/>
 <pin name="LED9" x="15.24" y="-15.24" length="middle" rot="R180"/>
 <pin name="LED8" x="15.24" y="-17.78" length="middle" rot="R180"/>
-<text x="-7.62" y="-25.4" size="1.778" layer="95">&gt;NAME</text>
+<text x="-15.24" y="-25.4" size="1.778" layer="95">&gt;NAME</text>
+<pin name="GND" x="0" y="-25.4" length="middle" rot="R90"/>
+</symbol>
+<symbol name="RGB_LED">
+<wire x1="0" y1="2.54" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="0" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.032" y1="0.762" x2="3.429" y2="2.159" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="1.905" x2="3.302" y2="3.302" width="0.1524" layer="94"/>
+<wire x1="-6.35" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-3.81" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="0" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="0" x2="-5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-3.81" y2="0" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-3.81" y2="0" width="0.254" layer="94"/>
+<wire x1="-3.048" y1="0.762" x2="-1.651" y2="2.159" width="0.1524" layer="94"/>
+<wire x1="-3.175" y1="1.905" x2="-1.778" y2="3.302" width="0.1524" layer="94"/>
+<text x="3.81" y="-10.16" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+<text x="-6.858" y="-1.27" size="1.016" layer="94" ratio="10" rot="R90">red</text>
+<text x="-2.794" y="0.254" size="1.016" layer="94" ratio="10" rot="R270">green</text>
+<pin name="A" x="-5.08" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<polygon width="0.1524" layer="94">
+<vertex x="3.429" y="2.159"/>
+<vertex x="3.048" y="1.27"/>
+<vertex x="2.54" y="1.778"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="3.302" y="3.302"/>
+<vertex x="2.921" y="2.413"/>
+<vertex x="2.413" y="2.921"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-2.667" y="2.921"/>
+<vertex x="-1.778" y="3.302"/>
+<vertex x="-2.159" y="2.413"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-2.54" y="1.778"/>
+<vertex x="-1.651" y="2.159"/>
+<vertex x="-2.032" y="1.27"/>
+</polygon>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="6.35" y2="0" width="0.254" layer="94"/>
+<wire x1="3.81" y1="0" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="6.35" y2="0" width="0.254" layer="94"/>
+<wire x1="3.81" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="6.35" y2="2.54" width="0.254" layer="94"/>
+<wire x1="3.81" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.112" y1="0.762" x2="8.509" y2="2.159" width="0.1524" layer="94"/>
+<wire x1="6.985" y1="1.905" x2="8.382" y2="3.302" width="0.1524" layer="94"/>
+<text x="2.286" y="0.254" size="1.016" layer="94" ratio="10" rot="R270">blue</text>
+<polygon width="0.1524" layer="94">
+<vertex x="8.509" y="2.159"/>
+<vertex x="8.128" y="1.27"/>
+<vertex x="7.62" y="1.778"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="8.382" y="3.302"/>
+<vertex x="8.001" y="2.413"/>
+<vertex x="7.493" y="2.921"/>
+</polygon>
+<wire x1="0" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<pin name="A1" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="A2" x="5.08" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="A3" x="-5.08" y="7.62" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="A4" x="0" y="7.62" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="A5" x="5.08" y="7.62" visible="off" length="short" direction="pas" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1280,6 +1365,14 @@
 </devices>
 </deviceset>
 <deviceset name="PCA9635">
+<description>The PCA9635 is an I2C-bus controlled 16-bit LED driver optimized for
+Red/Green/Blue/Amber (RGBA) color mixing applications. Each LED output has its own
+8-bit resolution (256 steps) ﬁxed frequency individual PWM controller that operates at
+97 kHz with a duty cycle that is adjustable from 0 % to 99.6 % to allow the LED to be set
+to a speciﬁc brightness value. An additional 8-bit resolution (256 steps) group PWM
+controller has both a ﬁxed frequency of 190 Hz and an adjustable frequency between
+24 Hz to once every 10.73 seconds with a duty cycle that is adjustable from 0 % to 99.6%
+that is used to either dim or blink all LEDs with the same value.</description>
 <gates>
 <gate name="G$1" symbol="PCA9635" x="0" y="0"/>
 </gates>
@@ -1293,6 +1386,7 @@
 <connect gate="G$1" pin="A4" pad="5"/>
 <connect gate="G$1" pin="A5" pad="24"/>
 <connect gate="G$1" pin="A6" pad="25"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="LED0" pad="6"/>
 <connect gate="G$1" pin="LED1" pad="7"/>
 <connect gate="G$1" pin="LED10" pad="17"/>

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -483,6 +483,18 @@
 <smd name="13" x="7.8" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
 <smd name="14" x="8.45" y="0" dx="0.45" dy="1.05" layer="1" rot="R180"/>
 <smd name="GND" x="4.325" y="2.775" dx="2.74" dy="4.75" layer="1" rot="R90"/>
+<rectangle x1="-1" y1="-0.57" x2="-0.5" y2="-0.07" layer="21" rot="R90"/>
+<text x="10.2" y="-0.35" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+</package>
+<package name="6-PLCC">
+<smd name="1" x="0" y="0" dx="3" dy="1.6" layer="1" rot="R180"/>
+<smd name="2" x="0" y="-2" dx="3" dy="1.6" layer="1" rot="R180"/>
+<smd name="3" x="0" y="-4" dx="3" dy="1.6" layer="1" rot="R180"/>
+<smd name="4" x="5.4" y="-4" dx="3" dy="1.6" layer="1" rot="R180"/>
+<smd name="5" x="5.4" y="-2" dx="3" dy="1.6" layer="1" rot="R180"/>
+<smd name="6" x="5.4" y="0" dx="3" dy="1.6" layer="1" rot="R180"/>
+<text x="-1.35" y="-6.35" size="1.27" layer="25">&gt;NAME</text>
+<rectangle x1="-1.45" y1="1.05" x2="-0.55" y2="1.95" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -809,7 +821,8 @@
 <pin name="LED10" x="15.24" y="-12.7" length="middle" rot="R180"/>
 <pin name="LED9" x="15.24" y="-15.24" length="middle" rot="R180"/>
 <pin name="LED8" x="15.24" y="-17.78" length="middle" rot="R180"/>
-<text x="-7.62" y="-25.4" size="1.778" layer="95">&gt;NAME</text>
+<text x="-15.24" y="-25.4" size="1.778" layer="95">&gt;NAME</text>
+<pin name="GND" x="0" y="-25.4" length="middle" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1278,6 +1291,14 @@
 </devices>
 </deviceset>
 <deviceset name="PCA9635">
+<description>The PCA9635 is an I2C-bus controlled 16-bit LED driver optimized for
+Red/Green/Blue/Amber (RGBA) color mixing applications. Each LED output has its own
+8-bit resolution (256 steps) ﬁxed frequency individual PWM controller that operates at
+97 kHz with a duty cycle that is adjustable from 0 % to 99.6 % to allow the LED to be set
+to a speciﬁc brightness value. An additional 8-bit resolution (256 steps) group PWM
+controller has both a ﬁxed frequency of 190 Hz and an adjustable frequency between
+24 Hz to once every 10.73 seconds with a duty cycle that is adjustable from 0 % to 99.6%
+that is used to either dim or blink all LEDs with the same value.</description>
 <gates>
 <gate name="G$1" symbol="PCA9635" x="0" y="0"/>
 </gates>
@@ -1291,6 +1312,7 @@
 <connect gate="G$1" pin="A4" pad="5"/>
 <connect gate="G$1" pin="A5" pad="24"/>
 <connect gate="G$1" pin="A6" pad="25"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="LED0" pad="6"/>
 <connect gate="G$1" pin="LED1" pad="7"/>
 <connect gate="G$1" pin="LED10" pad="17"/>
