@@ -901,7 +901,6 @@
 <pin name="LED9" x="15.24" y="-15.24" length="middle" rot="R180"/>
 <pin name="LED8" x="15.24" y="-17.78" length="middle" rot="R180"/>
 <text x="-15.24" y="-25.4" size="1.778" layer="95">&gt;NAME</text>
-<pin name="GND" x="0" y="-25.4" length="middle" rot="R90"/>
 </symbol>
 <symbol name="RGB_LED">
 <wire x1="0" y1="2.54" x2="0" y2="0" width="0.1524" layer="94"/>
@@ -1464,9 +1463,40 @@ controller has both a ﬁxed frequency of 190 Hz and an adjustable frequency bet
 24 Hz to once every 10.73 seconds with a duty cycle that is adjustable from 0 % to 99.6%
 that is used to either dim or blink all LEDs with the same value.</description>
 <gates>
+<gate name="G$1" symbol="PCA9635" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="TSSOP28_2">
+<device name="" package="TSSOP28">
+<connects>
+<connect gate="G$1" pin="A0" pad="1"/>
+<connect gate="G$1" pin="A1" pad="2"/>
+<connect gate="G$1" pin="A2" pad="3"/>
+<connect gate="G$1" pin="A3" pad="4"/>
+<connect gate="G$1" pin="A4" pad="5"/>
+<connect gate="G$1" pin="A5" pad="24"/>
+<connect gate="G$1" pin="A6" pad="25"/>
+<connect gate="G$1" pin="LED0" pad="6"/>
+<connect gate="G$1" pin="LED1" pad="7"/>
+<connect gate="G$1" pin="LED10" pad="17"/>
+<connect gate="G$1" pin="LED11" pad="18"/>
+<connect gate="G$1" pin="LED12" pad="19"/>
+<connect gate="G$1" pin="LED13" pad="20"/>
+<connect gate="G$1" pin="LED14" pad="21"/>
+<connect gate="G$1" pin="LED15" pad="22"/>
+<connect gate="G$1" pin="LED2" pad="8"/>
+<connect gate="G$1" pin="LED3" pad="9"/>
+<connect gate="G$1" pin="LED4" pad="10"/>
+<connect gate="G$1" pin="LED5" pad="11"/>
+<connect gate="G$1" pin="LED6" pad="12"/>
+<connect gate="G$1" pin="LED7" pad="13"/>
+<connect gate="G$1" pin="LED8" pad="15"/>
+<connect gate="G$1" pin="LED9" pad="16"/>
+<connect gate="G$1" pin="SCL" pad="26"/>
+<connect gate="G$1" pin="SDA" pad="27"/>
+<connect gate="G$1" pin="VDD" pad="28"/>
+<connect gate="G$1" pin="VSS" pad="14"/>
+<connect gate="G$1" pin="~OE" pad="23"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>

@@ -898,6 +898,17 @@
 <pin name="2" x="0" y="7.62" visible="off" length="short" direction="pas" rot="R270"/>
 <pin name="3" x="5.08" y="7.62" visible="off" length="short" direction="pas" rot="R270"/>
 </symbol>
+<symbol name="I2C_CONN">
+<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="SDA" x="2.54" y="-2.54" length="middle" rot="R180"/>
+<pin name="5V" x="2.54" y="0" length="middle" rot="R180"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<wire x1="0" y1="0" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<pin name="SCL" x="2.54" y="-5.08" length="middle" rot="R180"/>
+<pin name="GND" x="2.54" y="-7.62" length="middle" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="RESET_BUTTON">
@@ -1428,6 +1439,24 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <connect gate="G$1" pin="4" pad="4"/>
 <connect gate="G$1" pin="5" pad="5"/>
 <connect gate="G$1" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="I2C_CONN">
+<gates>
+<gate name="G$1" symbol="I2C_CONN" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="4CONN">
+<connects>
+<connect gate="G$1" pin="5V" pad="1"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="3"/>
+<connect gate="G$1" pin="SDA" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
