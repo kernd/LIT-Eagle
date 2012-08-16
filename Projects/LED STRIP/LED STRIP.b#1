@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.005" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.005" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="13" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Inner1" color="9" fill="1" visible="yes" active="yes"/>
@@ -26,7 +26,7 @@
 <layer number="16" name="Bottom" color="12" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
@@ -887,9 +887,16 @@ design rules under a new name.</description>
 <contactref element="U1" pad="22"/>
 <contactref element="LED15" pad="3"/>
 <via x="49.022" y="23.774" extent="1-16" drill="0.6"/>
-<wire x1="51.237" y1="15.219" x2="84.9" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="99.06" y1="11.43" x2="51.237" y2="15.219" width="0" layer="19" extent="1-16"/>
 <wire x1="51.237" y1="15.219" x2="51.235" y2="16.375" width="0.254" layer="1"/>
 <wire x1="49.022" y1="23.774" x2="51.235" y2="16.375" width="0.254" layer="1"/>
+<wire x1="84.9" y1="12.7" x2="85.09" y2="12.7" width="0.254" layer="1"/>
+<wire x1="85.09" y1="12.7" x2="85.09" y2="16.51" width="0.254" layer="1"/>
+<wire x1="85.09" y1="16.51" x2="88.265" y2="19.685" width="0.254" layer="1"/>
+<wire x1="88.265" y1="19.685" x2="94.615" y2="19.685" width="0.254" layer="1"/>
+<wire x1="94.615" y1="19.685" x2="99.06" y2="15.24" width="0.254" layer="1"/>
+<wire x1="99.06" y1="15.24" x2="99.06" y2="11.43" width="0.254" layer="1"/>
+<via x="99.06" y="11.43" extent="1-16" drill="0.6"/>
 </signal>
 <signal name="RED14">
 <contactref element="U1" pad="21"/>
@@ -935,29 +942,57 @@ design rules under a new name.</description>
 <contactref element="U1" pad="18"/>
 <contactref element="LED11" pad="3"/>
 <via x="54.102" y="23.774" extent="1-16" drill="0.6"/>
-<wire x1="53.837" y1="15.219" x2="166.18" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="180.34" y1="11.43" x2="53.837" y2="15.219" width="0" layer="19" extent="1-16"/>
 <wire x1="54.102" y1="23.774" x2="53.837" y2="15.219" width="0" layer="19" extent="1-1"/>
+<wire x1="166.18" y1="12.7" x2="166.37" y2="12.89" width="0.254" layer="1"/>
+<wire x1="166.37" y1="12.89" x2="166.37" y2="16.51" width="0.254" layer="1"/>
+<wire x1="166.37" y1="16.51" x2="168.91" y2="19.05" width="0.254" layer="1"/>
+<wire x1="168.91" y1="19.05" x2="176.53" y2="19.05" width="0.254" layer="1"/>
+<wire x1="176.53" y1="19.05" x2="180.34" y2="15.24" width="0.254" layer="1"/>
+<wire x1="180.34" y1="15.24" x2="180.34" y2="11.43" width="0.254" layer="1"/>
+<via x="180.34" y="11.43" extent="1-16" drill="0.6"/>
 </signal>
 <signal name="RED10">
 <contactref element="U1" pad="17"/>
 <contactref element="LED10" pad="3"/>
 <via x="55.372" y="23.774" extent="1-16" drill="0.6"/>
-<wire x1="55.372" y1="23.774" x2="186.5" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="200.66" y1="11.43" x2="55.372" y2="23.774" width="0" layer="19" extent="1-16"/>
 <wire x1="54.487" y1="15.219" x2="55.372" y2="23.774" width="0" layer="19" extent="1-1"/>
+<wire x1="186.5" y1="12.7" x2="186.69" y2="12.89" width="0.254" layer="1"/>
+<wire x1="186.69" y1="12.89" x2="186.69" y2="16.51" width="0.254" layer="1"/>
+<wire x1="186.69" y1="16.51" x2="189.23" y2="19.05" width="0.254" layer="1"/>
+<wire x1="189.23" y1="19.05" x2="196.85" y2="19.05" width="0.254" layer="1"/>
+<wire x1="196.85" y1="19.05" x2="200.66" y2="15.24" width="0.254" layer="1"/>
+<wire x1="200.66" y1="15.24" x2="200.66" y2="11.43" width="0.254" layer="1"/>
+<via x="200.66" y="11.43" extent="1-16" drill="0.6"/>
 </signal>
 <signal name="RED9">
 <contactref element="U1" pad="16"/>
 <contactref element="LED9" pad="3"/>
 <via x="56.642" y="23.774" extent="1-16" drill="0.6"/>
-<wire x1="56.642" y1="23.774" x2="206.82" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="220.98" y1="11.43" x2="56.642" y2="23.774" width="0" layer="19" extent="1-16"/>
 <wire x1="55.137" y1="15.219" x2="56.642" y2="23.774" width="0" layer="19" extent="1-1"/>
+<wire x1="206.82" y1="12.7" x2="207.01" y2="12.89" width="0.254" layer="1"/>
+<wire x1="207.01" y1="12.89" x2="207.01" y2="16.51" width="0.254" layer="1"/>
+<wire x1="207.01" y1="16.51" x2="209.55" y2="19.05" width="0.254" layer="1"/>
+<wire x1="209.55" y1="19.05" x2="217.17" y2="19.05" width="0.254" layer="1"/>
+<wire x1="217.17" y1="19.05" x2="220.98" y2="15.24" width="0.254" layer="1"/>
+<wire x1="220.98" y1="15.24" x2="220.98" y2="11.43" width="0.254" layer="1"/>
+<via x="220.98" y="11.43" extent="1-16" drill="0.6"/>
 </signal>
 <signal name="RED8">
 <contactref element="U1" pad="15"/>
 <contactref element="LED8" pad="3"/>
 <via x="57.912" y="23.774" extent="1-16" drill="0.6"/>
-<wire x1="57.912" y1="23.774" x2="227.14" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="241.3" y1="11.43" x2="57.912" y2="23.774" width="0" layer="19" extent="1-16"/>
 <wire x1="55.787" y1="15.219" x2="57.912" y2="23.774" width="0" layer="19" extent="1-1"/>
+<wire x1="227.14" y1="12.7" x2="227.33" y2="12.89" width="0.254" layer="1"/>
+<wire x1="227.33" y1="12.89" x2="227.33" y2="16.51" width="0.254" layer="1"/>
+<wire x1="227.33" y1="16.51" x2="229.87" y2="19.05" width="0.254" layer="1"/>
+<wire x1="229.87" y1="19.05" x2="237.49" y2="19.05" width="0.254" layer="1"/>
+<wire x1="237.49" y1="19.05" x2="241.3" y2="15.24" width="0.254" layer="1"/>
+<wire x1="241.3" y1="15.24" x2="241.3" y2="11.43" width="0.254" layer="1"/>
+<via x="241.3" y="11.43" extent="1-16" drill="0.6"/>
 </signal>
 <signal name="GREEN0">
 <contactref element="U2" pad="6"/>
