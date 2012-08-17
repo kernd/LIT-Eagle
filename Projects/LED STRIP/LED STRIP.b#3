@@ -990,8 +990,11 @@ design rules under a new name.</description>
 <via x="124.054" y="1.584" extent="1-16" drill="0.6"/>
 <via x="65.532" y="1.524" extent="1-16" drill="0.6"/>
 <wire x1="124.054" y1="1.584" x2="123.98" y2="5.08" width="0" layer="19" extent="1-1"/>
-<wire x1="65.532" y1="1.524" x2="124.054" y2="1.584" width="0" layer="19" extent="1-1"/>
 <wire x1="64.617" y1="4.419" x2="65.532" y2="1.524" width="0" layer="19" extent="1-1"/>
+<wire x1="124.054" y1="1.584" x2="121.574" y2="4.064" width="0.254" layer="15"/>
+<wire x1="121.574" y1="4.064" x2="66.548" y2="4.064" width="0.254" layer="15"/>
+<wire x1="66.548" y1="4.064" x2="65.532" y2="3.048" width="0.254" layer="15"/>
+<wire x1="65.532" y1="3.048" x2="65.532" y2="1.524" width="0.254" layer="15"/>
 </signal>
 <signal name="GREEN5">
 <contactref element="U2" pad="11"/>
