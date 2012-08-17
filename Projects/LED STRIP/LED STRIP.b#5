@@ -1001,8 +1001,13 @@ design rules under a new name.</description>
 <wire x1="55.1688" y1="11.1252" x2="56.642" y2="12.5984" width="0.254" layer="1"/>
 <wire x1="56.642" y1="12.5984" x2="56.642" y2="13.274" width="0.254" layer="1"/>
 <via x="407.9494" y="1.8542" extent="1-16" drill="0.6"/>
-<wire x1="407.9494" y1="1.8542" x2="407.92" y2="5.08" width="0" layer="19" extent="1-1"/>
-<wire x1="56.642" y1="12.5984" x2="407.92" y2="5.08" width="0" layer="19" extent="1-1"/>
+<wire x1="407.9494" y1="1.8542" x2="407.9494" y2="4.5466" width="0.254" layer="16"/>
+<wire x1="407.9494" y1="4.5466" x2="400.812" y2="11.684" width="0.254" layer="16"/>
+<wire x1="400.812" y1="11.684" x2="57.404" y2="11.684" width="0.254" layer="16"/>
+<wire x1="57.404" y1="11.684" x2="56.5658" y2="12.5222" width="0.254" layer="16"/>
+<wire x1="56.5658" y1="12.5222" x2="56.5658" y2="13.1978" width="0.254" layer="16"/>
+<wire x1="56.5658" y1="13.1978" x2="56.642" y2="13.274" width="0.254" layer="16"/>
+<wire x1="407.9494" y1="4.5466" x2="407.92" y2="5.08" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="RED8">
 <contactref element="U1" pad="15"/>
@@ -1011,8 +1016,12 @@ design rules under a new name.</description>
 <via x="430.8002" y="1.803" extent="1-16" drill="0.6"/>
 <wire x1="55.787" y1="10.219" x2="57.912" y2="12.344" width="0.254" layer="1"/>
 <wire x1="57.912" y1="12.344" x2="57.912" y2="13.274" width="0.254" layer="1"/>
-<wire x1="430.8002" y1="1.803" x2="430.78" y2="5.08" width="0" layer="19" extent="1-1"/>
-<wire x1="57.912" y1="12.344" x2="430.78" y2="5.08" width="0" layer="19" extent="1-1"/>
+<wire x1="430.8002" y1="1.803" x2="430.8002" y2="2.7778" width="0.254" layer="16"/>
+<wire x1="430.8002" y1="2.7778" x2="421.2844" y2="12.1666" width="0.254" layer="16"/>
+<wire x1="421.2844" y1="12.1666" x2="58.1914" y2="12.1666" width="0.254" layer="16"/>
+<wire x1="58.1914" y1="12.1666" x2="57.912" y2="12.446" width="0.254" layer="16"/>
+<wire x1="57.912" y1="12.446" x2="57.912" y2="13.274" width="0.254" layer="16"/>
+<wire x1="430.8002" y1="2.7778" x2="430.78" y2="5.08" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="GREEN0">
 <contactref element="U2" pad="6"/>

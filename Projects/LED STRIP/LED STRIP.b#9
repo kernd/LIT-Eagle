@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.001" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="13" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Inner1" color="9" fill="1" visible="yes" active="yes"/>
@@ -996,12 +996,12 @@ design rules under a new name.</description>
 <contactref element="U1" pad="16"/>
 <contactref element="LED9" pad="3"/>
 <via x="56.642" y="13.274" extent="1-16" drill="0.6"/>
-<via x="407.9656" y="1.8792" extent="1-16" drill="0.6"/>
 <wire x1="55.137" y1="10.219" x2="55.1688" y2="10.2508" width="0.254" layer="1"/>
 <wire x1="55.1688" y1="10.2508" x2="55.1688" y2="11.1252" width="0.254" layer="1"/>
 <wire x1="55.1688" y1="11.1252" x2="56.642" y2="12.5984" width="0.254" layer="1"/>
 <wire x1="56.642" y1="12.5984" x2="56.642" y2="13.274" width="0.254" layer="1"/>
-<wire x1="407.9656" y1="1.8792" x2="407.92" y2="5.08" width="0" layer="19" extent="1-1"/>
+<via x="407.9494" y="1.8542" extent="1-16" drill="0.6"/>
+<wire x1="407.9494" y1="1.8542" x2="407.92" y2="5.08" width="0" layer="19" extent="1-1"/>
 <wire x1="56.642" y1="12.5984" x2="407.92" y2="5.08" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RED8">
@@ -1443,8 +1443,12 @@ design rules under a new name.</description>
 <wire x1="78.0034" y1="10.2254" x2="78.0034" y2="11.0236" width="0.254" layer="1"/>
 <wire x1="78.0034" y1="11.0236" x2="79.642" y2="12.6622" width="0.254" layer="1"/>
 <wire x1="79.642" y1="12.6622" x2="79.642" y2="13.274" width="0.254" layer="1"/>
+<wire x1="403.927" y1="1.8538" x2="403.7842" y2="1.8538" width="0.254" layer="2"/>
+<wire x1="403.7842" y1="1.8538" x2="393.954" y2="11.684" width="0.254" layer="2"/>
+<wire x1="393.954" y1="11.684" x2="80.6202" y2="11.684" width="0.254" layer="2"/>
+<wire x1="80.6202" y1="11.684" x2="79.642" y2="12.6622" width="0.254" layer="2"/>
+<wire x1="79.642" y1="12.6622" x2="79.642" y2="13.274" width="0.254" layer="2"/>
 <wire x1="403.927" y1="1.8538" x2="403.92" y2="5.08" width="0" layer="19" extent="1-1"/>
-<wire x1="79.642" y1="12.6622" x2="403.92" y2="5.08" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="BLUE8">
 <contactref element="U3" pad="15"/>
