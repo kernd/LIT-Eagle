@@ -193,28 +193,6 @@
 <text x="-1.35" y="-6.35" size="1.27" layer="25">&gt;NAME</text>
 <rectangle x1="-1.45" y1="1.05" x2="-0.55" y2="1.95" layer="21"/>
 </package>
-<package name="4CONN">
-<pad name="1" x="-3.81" y="0" drill="0.89"/>
-<pad name="2" x="-1.27" y="0" drill="0.89"/>
-<wire x1="-5.08" y1="1.27" x2="-2.54" y2="1.27" width="0.01" layer="51"/>
-<wire x1="-2.54" y1="-1.27" x2="-5.08" y2="-1.27" width="0.01" layer="51"/>
-<wire x1="-5.08" y1="1.27" x2="-5.08" y2="-1.27" width="0.01" layer="51"/>
-<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="1.27" width="0.01" layer="51"/>
-<wire x1="-2.54" y1="1.27" x2="0" y2="1.27" width="0.01" layer="51"/>
-<wire x1="0" y1="-1.27" x2="-2.54" y2="-1.27" width="0.01" layer="51"/>
-<rectangle x1="-5.08" y1="-1.27" x2="0" y2="1.27" layer="39"/>
-<text x="-4.6" y="2" size="1.27" layer="25" font="vector">&gt;NAME</text>
-<pad name="3" x="1.27" y="0" drill="0.89"/>
-<pad name="4" x="3.81" y="0" drill="0.89"/>
-<wire x1="0" y1="1.27" x2="2.54" y2="1.27" width="0.01" layer="51"/>
-<wire x1="2.54" y1="-1.27" x2="0" y2="-1.27" width="0.01" layer="51"/>
-<wire x1="0" y1="1.27" x2="0" y2="-1.27" width="0.01" layer="51"/>
-<wire x1="2.54" y1="-1.27" x2="2.54" y2="1.27" width="0.01" layer="51"/>
-<wire x1="2.54" y1="1.27" x2="5.08" y2="1.27" width="0.01" layer="51"/>
-<wire x1="5.08" y1="-1.27" x2="2.54" y2="-1.27" width="0.01" layer="51"/>
-<wire x1="5.08" y1="-1.27" x2="5.08" y2="1.27" width="0.01" layer="51"/>
-<rectangle x1="0" y1="-1.27" x2="5.08" y2="1.27" layer="39"/>
-</package>
 <package name="0402">
 <smd name="P$1" x="0" y="0" dx="0.6" dy="0.4" layer="1" rot="R270"/>
 <smd name="P$2" x="0.9" y="0" dx="0.6" dy="0.4" layer="1" rot="R270"/>
@@ -335,17 +313,6 @@
 <pin name="2" x="0" y="7.62" visible="off" length="short" direction="pas" rot="R270"/>
 <pin name="1" x="5.08" y="7.62" visible="off" length="short" direction="pas" rot="R270"/>
 </symbol>
-<symbol name="I2C_CONN">
-<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
-<pin name="SDA" x="2.54" y="-2.54" length="middle" rot="R180"/>
-<pin name="5V" x="2.54" y="0" length="middle" rot="R180"/>
-<text x="-5.08" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-<wire x1="0" y1="0" x2="0" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="0" width="0.254" layer="94"/>
-<pin name="SCL" x="2.54" y="-5.08" length="middle" rot="R180"/>
-<pin name="GND" x="2.54" y="-7.62" length="middle" rot="R180"/>
-</symbol>
 <symbol name="RESISTOR">
 <wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
 <wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
@@ -426,24 +393,6 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <connect gate="G$1" pin="4" pad="4"/>
 <connect gate="G$1" pin="5" pad="5"/>
 <connect gate="G$1" pin="6" pad="6"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="I2C_CONN">
-<gates>
-<gate name="G$1" symbol="I2C_CONN" x="2.54" y="0"/>
-</gates>
-<devices>
-<device name="" package="4CONN">
-<connects>
-<connect gate="G$1" pin="5V" pad="1"/>
-<connect gate="G$1" pin="GND" pad="4"/>
-<connect gate="G$1" pin="SCL" pad="3"/>
-<connect gate="G$1" pin="SDA" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -537,7 +486,6 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <part name="LED2" library="lightsuits" deviceset="LED_RGB" device=""/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="U$1" library="lightsuits" deviceset="I2C_CONN" device=""/>
 <part name="LED3" library="lightsuits" deviceset="LED_RGB" device=""/>
 <part name="LED4" library="lightsuits" deviceset="LED_RGB" device=""/>
 <part name="LED5" library="lightsuits" deviceset="LED_RGB" device=""/>
@@ -615,7 +563,6 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <instance part="LED2" gate="G$1" x="58.42" y="50.8"/>
 <instance part="P+1" gate="1" x="-38.1" y="200.66"/>
 <instance part="GND1" gate="1" x="-38.1" y="5.08"/>
-<instance part="U$1" gate="G$1" x="-83.82" y="175.26"/>
 <instance part="LED3" gate="G$1" x="73.66" y="50.8"/>
 <instance part="LED4" gate="G$1" x="88.9" y="50.8"/>
 <instance part="LED5" gate="G$1" x="104.14" y="50.8"/>
@@ -710,10 +657,10 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="-38.1" y1="7.62" x2="-38.1" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="VSS"/>
-<wire x1="-38.1" y1="114.3" x2="-38.1" y2="127" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="114.3" x2="-38.1" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="119.38" x2="-38.1" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="121.92" x2="-38.1" y2="127" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="127" x2="27.94" y2="127" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="GND"/>
-<wire x1="-81.28" y1="167.64" x2="-38.1" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="167.64" x2="-38.1" y2="127" width="0.1524" layer="91"/>
 <junction x="-38.1" y="127"/>
 <wire x1="-38.1" y1="114.3" x2="96.52" y2="114.3" width="0.1524" layer="91"/>
@@ -741,11 +688,9 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <wire x1="114.3" y1="167.64" x2="116.84" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="167.64" x2="119.38" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="167.64" x2="210.82" y2="167.64" width="0.1524" layer="91"/>
-<junction x="-38.1" y="167.64"/>
 <pinref part="U1" gate="G$1" pin="A0"/>
 <wire x1="210.82" y1="167.64" x2="213.36" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="167.64" x2="215.9" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="167.64" x2="220.98" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="160.02" x2="25.4" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="160.02" x2="25.4" y2="167.64" width="0.1524" layer="91"/>
 <junction x="25.4" y="167.64"/>
@@ -757,13 +702,9 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <wire x1="124.46" y1="157.48" x2="119.38" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="157.48" x2="119.38" y2="167.64" width="0.1524" layer="91"/>
 <junction x="119.38" y="167.64"/>
-<pinref part="U3" gate="G$1" pin="A0"/>
-<wire x1="223.52" y1="160.02" x2="220.98" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="160.02" x2="220.98" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="A2"/>
 <wire x1="223.52" y1="154.94" x2="215.9" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="154.94" x2="215.9" y2="167.64" width="0.1524" layer="91"/>
-<junction x="215.9" y="167.64"/>
 <pinref part="U2" gate="G$1" pin="A2"/>
 <wire x1="124.46" y1="154.94" x2="116.84" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="154.94" x2="116.84" y2="167.64" width="0.1524" layer="91"/>
@@ -796,20 +737,26 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <wire x1="223.52" y1="149.86" x2="210.82" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="149.86" x2="210.82" y2="167.64" width="0.1524" layer="91"/>
 <junction x="210.82" y="167.64"/>
+<pinref part="U2" gate="G$1" pin="VSS"/>
+<wire x1="124.46" y1="127" x2="124.46" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="121.92" x2="-38.1" y2="121.92" width="0.1524" layer="91"/>
+<junction x="-38.1" y="121.92"/>
+<pinref part="U3" gate="G$1" pin="VSS"/>
+<wire x1="223.52" y1="127" x2="220.98" y2="127" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="127" x2="220.98" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="119.38" x2="-38.1" y2="119.38" width="0.1524" layer="91"/>
+<junction x="-38.1" y="119.38"/>
 </segment>
 </net>
 <net name="+5V" class="0">
 <segment>
 <pinref part="P+1" gate="1" pin="+5V"/>
 <wire x1="-38.1" y1="198.12" x2="-38.1" y2="193.04" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="5V"/>
 <wire x1="-38.1" y1="193.04" x2="-38.1" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="190.5" x2="-38.1" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="175.26" x2="-81.28" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="175.26" x2="-15.24" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="175.26" x2="68.58" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="175.26" x2="68.58" y2="160.02" width="0.1524" layer="91"/>
-<junction x="-38.1" y="175.26"/>
 <pinref part="U1" gate="G$1" pin="VDD"/>
 <wire x1="68.58" y1="160.02" x2="58.42" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="175.26" x2="71.12" y2="175.26" width="0.1524" layer="91"/>
@@ -823,7 +770,8 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <wire x1="167.64" y1="175.26" x2="170.18" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="175.26" x2="172.72" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="175.26" x2="218.44" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="175.26" x2="256.54" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="175.26" x2="220.98" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="175.26" x2="256.54" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="256.54" y1="175.26" x2="259.08" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="259.08" y1="175.26" x2="274.32" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="274.32" y1="175.26" x2="274.32" y2="160.02" width="0.1524" layer="91"/>
@@ -1063,6 +1011,10 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <wire x1="-22.86" y1="187.96" x2="-22.86" y2="193.04" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="193.04" x2="-38.1" y2="193.04" width="0.1524" layer="91"/>
 <junction x="-38.1" y="193.04"/>
+<pinref part="U3" gate="G$1" pin="A0"/>
+<wire x1="223.52" y1="160.02" x2="220.98" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="160.02" x2="220.98" y2="175.26" width="0.1524" layer="91"/>
+<junction x="220.98" y="175.26"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -1177,9 +1129,8 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <wire x1="256.54" y1="45.72" x2="256.54" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$51" class="0">
+<net name="SDA" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="SDA"/>
 <pinref part="U1" gate="G$1" pin="SDA"/>
 <wire x1="58.42" y1="157.48" x2="66.04" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="157.48" x2="66.04" y2="172.72" width="0.1524" layer="91"/>
@@ -1192,17 +1143,14 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <junction x="165.1" y="172.72"/>
 <pinref part="U3" gate="G$1" pin="SDA"/>
 <wire x1="271.78" y1="157.48" x2="254" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="172.72" x2="-30.48" y2="172.72" width="0.1524" layer="91"/>
 <junction x="66.04" y="172.72"/>
 <pinref part="R49" gate="G$1" pin="2"/>
 <wire x1="-30.48" y1="172.72" x2="66.04" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="177.8" x2="-30.48" y2="172.72" width="0.1524" layer="91"/>
-<junction x="-30.48" y="172.72"/>
 </segment>
 </net>
-<net name="N$52" class="0">
+<net name="SCL" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="SCL"/>
 <wire x1="63.5" y1="170.18" x2="63.5" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="SCL"/>
 <wire x1="63.5" y1="154.94" x2="58.42" y2="154.94" width="0.1524" layer="91"/>
@@ -1215,12 +1163,10 @@ that is used to either dim or blink all LEDs with the same value.</description>
 <junction x="162.56" y="170.18"/>
 <pinref part="U3" gate="G$1" pin="SCL"/>
 <wire x1="269.24" y1="154.94" x2="254" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="170.18" x2="-22.86" y2="170.18" width="0.1524" layer="91"/>
 <junction x="63.5" y="170.18"/>
 <pinref part="R50" gate="G$1" pin="2"/>
 <wire x1="-22.86" y1="170.18" x2="63.5" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="177.8" x2="-22.86" y2="170.18" width="0.1524" layer="91"/>
-<junction x="-22.86" y="170.18"/>
 </segment>
 </net>
 <net name="RED0" class="0">
